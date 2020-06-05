@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 const { wordList, } = require('./wordList.js');
 
-const boardSize = 25;
 const colourList = ['blue', 'blue', 'blue', 'blue', 'blue', 'blue', 'blue', 'blue', 'blue', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'neutral', 'neutral', 'neutral', 'neutral', 'neutral', 'neutral', 'neutral', 'black'];
+const boardSize = colourList.length;
 
 function generateRandomList(totalLength, outputLength) {
   let nums = Array.from(Array(totalLength).keys());
@@ -62,7 +62,6 @@ class Board extends React.Component {
     squares[i].isUncovered = true;
     this.setState({
       squares: squares,
-      blueIsNext: this.state.blueIsNext && squares[i].colour != 'blue' ? false : true,
     });
   }
 
@@ -78,11 +77,8 @@ class Board extends React.Component {
   }
 
   render() {
-    const status = 'Next player: ' + (this.state.blueIsNext ? 'Blue' : 'Red');
-
     return (
       <div>
-        <div className='status'>{status}</div>
         <div className='board-row'>
           {this.renderSquare(0)}
           {this.renderSquare(1)}
