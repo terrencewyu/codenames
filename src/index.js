@@ -8,6 +8,7 @@ const boardSize = colourList.length;
 
 // This is a new comment
 // This is a new comment 2
+// This is a new comment 3
 function generateRandomList(totalLength, outputLength) {
   let nums = Array.from(Array(totalLength).keys());
   let result = [];
