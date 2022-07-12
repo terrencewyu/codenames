@@ -6,9 +6,7 @@ const { wordList, } = require('./wordList.js');
 const colourList = ['blue', 'blue', 'blue', 'blue', 'blue', 'blue', 'blue', 'blue', 'blue', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'neutral', 'neutral', 'neutral', 'neutral', 'neutral', 'neutral', 'neutral', 'black'];
 const boardSize = colourList.length;
 
-// This is a new comment
-// This is a new comment 2
-// This is a very unique new comment 3
+// This is a new comment for the surf
 function generateRandomList(totalLength, outputLength) {
   let nums = Array.from(Array(totalLength).keys());
   let result = [];
