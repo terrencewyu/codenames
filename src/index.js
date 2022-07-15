@@ -7,6 +7,7 @@ const colourList = ['blue', 'blue', 'blue', 'blue', 'blue', 'blue', 'blue', 'blu
 const boardSize = colourList.length;
 
 // This is a new comment
+// This is a really new comment
 function generateRandomList(totalLength, outputLength) {
   let nums = Array.from(Array(totalLength).keys());
   let result = [];
